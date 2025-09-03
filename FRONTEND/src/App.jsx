@@ -8,7 +8,7 @@ import ChatHistory from "./components/ChatHistory";
 import ChatInput from "./components/ChatInput";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import APIinstance from "./api";
+
 
 const RESPONSE_TIMEOUT = 15000; // ms
 
