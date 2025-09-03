@@ -8,6 +8,7 @@ import ChatHistory from "./components/ChatHistory";
 import ChatInput from "./components/ChatInput";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import APIinstance from "./api";
 
 const RESPONSE_TIMEOUT = 15000; // ms
 
@@ -247,8 +248,9 @@ const resetChat = () => {
   };
 
   useEffect(() => {
-    const socketInstance = io("http://localhost:3000", { withCredentials: true });
-    setSocket(socketInstance);
+  const socketInstance = io("https://ai-chatbot-7xot.onrender.com", {
+  withCredentials: true });
+  setSocket(socketInstance);
 
     socketInstance.on("ai-ke-message-ka-response", (response) => {
       clearPendingTimeout();
