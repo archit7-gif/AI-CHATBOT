@@ -11,10 +11,14 @@ const app = require('./src/app');
 const httpServer = createServer(app);
 const io = new Server(httpServer, { 
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "https://ai-chatbot-oarg.vercel.app", // ✅ include https
+      "http://localhost:5173"              // dev
+    ],
     credentials: true
   }
 });
+
 
 // 🚨 per-socket history (not global)
 let latestMessageId = {}; // track latest per socket
