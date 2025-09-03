@@ -10,7 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-const RESPONSE_TIMEOUT = 15000; // ms
+const RESPONSE_TIMEOUT = 10000; // ms
 
 const App = () => {
   const [socket, setSocket] = useState();
